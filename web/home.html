@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="w3school.css">
+    <link rel="icon" type="image/x-icon" href="LOGO.png">
+    <link rel="stylesheet" href="frontAwesome.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="home_style.css">
+    <script src="html2pdf.js"></script>
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="overlay" id="overlay"></div>
+
+    <div class="hero">
+        <div class="page" id="invoice">
+            <div class="navbar">
+                <h2 class="car">كـار جاس</h2>
+                <h2>الإدارة العامة المساعدة لشئون العاملين</h2>
+                <div class="img_name ">
+                    <img src="logo.png" alt="" id="logo" >
+
+                </div>
+            </div>
+
+
+            <div class="left_right">
+
+                <section class="right">
+                    <img id='pp' src="a.png" alt="" class="clickable-image">
+                    <label class="label_buttons">الـساعـات </label>
+                    <div class="buttons_pop_up">
+                        <button>التأخيرات</button>
+                        <button>إجازة اعتيادي</button>
+                        <button>إجازة سنوي</button>
+                        <button>إجازة عارضة</button>
+                        <button>إجازة مرضي</button>
+                        <button>إجازة وضع</button>
+                        <button>حج</button>
+                        <button>سفر</button>
+                        <button>غياب</button>
+                        <button>عمل بالعطلة</button>
+                        <button>عمل بالراحات</button>
+                        <button>بدل راحة</button>
+                        <button>استثنائية</button>
+                        <button>اصابة عمل</button>
+
+                    </div>
+                    <label class="label_Date_range">مدة الـشـهور</label>
+
+                    <form action="" method="post" class="date-container">
+                        <label for="start_date">مـن :</label>
+                        <input type="month" id="start_date" name="start_date" dir="rtl" lang="ar" required lang="ar"
+                            value="2023-01">
+
+                        <label for="end_date">إلـى :</label>
+                        <input type="month" id="end_date" name="end_date" dir="rtl" lang="ar" required value="2023-12">
+
+                    </form>
+                    <label class="files_pdf">ملفات </label>
+                    <div class="buttons_pop_up pdfs">
+                        <button>شهادة مزاولة المهنة</button>
+                        <button>ملف الموظف</button>
+                        <button id="download">تحميل معلومات الموظف</button>
+
+                    </div>
+                </section>
+
+
+                <div class="left">
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="popup" id="popup">
+        <h2 id="popup-title"></h2>
+
+        <div id="data" lang="ar" dir="rtl">
+            <table id="data-table">
+                <thead>
+                    <tr>
+
+                    </tr>
+                </thead>
+                <tbody id="data-body">
+
+                </tbody>
+            </table>
+
+        </div>
+
+        <div id="pdfViewer">
+            <embed id="pdfEmbed" src="" type="application/pdf" width="100%">
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+    <script src="eel.js"></script>
+    <script>
+        const logOut = document.getElementById('logo');
+        logOut.addEventListener('click', () => {
+            eel.logOut()
+            window.location.href = 'index.html';
+        })
+        const clickableImage = document.querySelector('.clickable-image');
+        const modal = document.getElementById('modal');
+        const modalImage = document.getElementById('modal-image');
+        const closeModal = document.querySelector('.close');
+
+        clickableImage.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            modalImage.src = clickableImage.src;
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+    </script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

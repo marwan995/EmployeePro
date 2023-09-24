@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="w3school.css">
+    <link rel="icon" type="image/x-icon" href="LOGO.png">
+    <link rel="stylesheet" href="frontAwesome.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="eel.js"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="login">
+        <form action="" class="login_container">
+            <img src="t.jpg" alt="" class="user_img">
+            <div class="input_container">
+                <input type="number" placeholder="رقم الاداء" id="performanceId" required dir="rtl">
+                <img src="email.svg" alt="">
+            </div>
+            <div class="input_container">
+                <input type="password" placeholder="كلمة المرور" id="password" required dir="rtl">
+                <img src="password.svg" alt="">
+            </div>
+
+            <button type="submit">دخـــول</button>
+
+        </form>
+        <div class="noti_bt">
+        <a href="#" class="notification">
+            <span>انذارات الانتهاء</span>
+            <span class="badge">0</span>
+        </a>
+        <a href="#" class="notification">
+            <span>سلفة</span>
+           
+        </a>
+    </div>
+
+    </div>
+<div class="overlay_message_box">
+<div class="message_box">
+    <h1>رقم الاداء غير موجود</h1>
+    <p> : نعتذر، ولكن الرقم الذي أدخلته للأداء غير موجود في الشيتات التالية</p>
+    <ul>
+      
+    </ul>
+    <p>يرجى التحقق مرة أخرى من وجود رقم الاادء والمعلومات في الشيتات الموضحه </p>
+    <button class="ok-button">OK</button>
+</div>
+</div>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <p id="loadingText">Loading... Please wait</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
